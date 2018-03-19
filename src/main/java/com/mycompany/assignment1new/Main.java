@@ -69,7 +69,7 @@ public class Main {
         }
 
         public void createFile() throws IOException {
-            File file = new File("C:/Users/ROG_PC/243102-STIW3054-A172-A1-WIKI/Markdown.md");
+            File file = new File("C:/Users/ROG_PC/243102-STIW3054-A172-A1.wiki/Markdown.md");
             writer = new BufferedWriter(new FileWriter(file));
         }
 
@@ -94,17 +94,11 @@ public class Main {
 
     public static class PushGithub {
 
-        public void openGitbash() throws IOException {
-            String[] command = {"C:/Program Files/Git/git-bash.exe",
-                "/c", "cd && cd STIW3054_Assignment1.wiki && git add * && git commit -m \"Test\" && git push"};
-            Runtime.getRuntime().exec(command);
-        }
-
         public void runGit() throws IOException {
             try {
 
                 ProcessBuilder builder = new ProcessBuilder(
-                        "cmd.exe", "/c", "cd && cd \"C:\\Users\\ROG_PC\\243102-STIW3054-A172-A1-WIKI\" && git add * && git commit -m \"Test\" && git pull && git push");
+                        "cmd.exe", "/c", "cd && cd \"C:\\Users\\ROG_PC\\243102-STIW3054-A172-A1.wiki\" && git add * && git commit -m \"Test\" && git pull && git push");
                 builder.redirectErrorStream(true);
                 Process p = builder.start();
                 BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
